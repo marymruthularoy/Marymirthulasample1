@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">MARY FIRST</a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                   
+                    <a href="@Url.Content("/Home/index/")" class="nav-link" role="button">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Content("/Home/Login/")" class="nav-link" role="button">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Content("/Home/Logout/")" class="nav-link" role="button">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+
+
+      
+
+
+           
+            <div class="col-md-12">
+
+                <div>
+                    @RenderBody()
+                </div>
+                </div>
+</div>
+
+
+    </div>
+  
+
+</body>
+</html>
