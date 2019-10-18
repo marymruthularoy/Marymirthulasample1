@@ -183,9 +183,26 @@ namespace Marymirthulasample1.Controllers
             }
             return View(rt);
         }
+        public ActionResult Detailshello(int Id)
+        {
+            if (Session["username"] == null || Session["userid"].ToString() == null)
+            {
+                TempData["Message"] = "You Have To Login !!!!";
+                return this.RedirectToAction("Login", "Home");
+            }
+
+            Register_table rt = msample1.Register_table.Find(Id);
+
+            if (rt == null)
+            {
+                return HttpNotFound();
+            }
+            return View(rt);
+        }
 
 
-     
+
+        //hai
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
